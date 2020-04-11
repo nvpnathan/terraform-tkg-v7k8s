@@ -19,7 +19,7 @@ vds             = "tf-mgmt"
 
 
 ## vSphere Resources
-vm_folder       = "tkg-vms"
+vm_folder       = "tf-tkg-vms"
 mgmt_rp         = "tf-tkg-mgmt"
 comp_rp         = "tf-tkg-workload"
 mgmt_net        = "tf-tkg-k8s-mgmt"
@@ -31,11 +31,11 @@ vlan_tz         = "vlan-tz"
 overlay_tz      = "overlay-tz"
 
 ## NSX Resources
-t0_rtr_01           = "t0-tkg"
-t0_uplink           = "t0_uplink"
-t0_uplink_01        = "t0-uplink-01"
+t0_rtr_01           = "tf-t0-tkg"
+t0_uplink           = "tf-t0_uplink"
+t0_uplink_01        = "tf-t0-uplink-01"
 t0_uplink_ip_01     = "192.168.71.9/24"
-t0_uplink_02        = "t0-uplink-02"
+t0_uplink_02        = "tf-t0-uplink-02"
 t0_uplink_ip_02     = "192.168.71.10/24"
 t0_uplink_vlan      = "71"
 default_route_ip    = "192.168.71.1"
