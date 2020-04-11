@@ -17,7 +17,6 @@ mgmt_cluster    = "tf-vlab-mgmt"
 comp_cluster    = "tf-vlab-tkg"
 vds             = "tf-mgmt"
 
-
 ## vSphere Resources
 vm_folder       = "tf-tkg-vms"
 mgmt_rp         = "tf-tkg-mgmt"
