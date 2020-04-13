@@ -20,6 +20,11 @@ variable "datacenter" {
   description = "datacenter object in vcenter"
 }
 
+variable "content_library_ds" {
+  type        = string
+  description = "content library datastore"
+}
+
 variable "mgmt_cluster" {
   type        = string
   description = "cluster object in vcenter"

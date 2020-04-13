@@ -18,6 +18,11 @@ data "vsphere_distributed_virtual_switch" "vds" {
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
+data "vsphere_datastore" "library_datastore" {
+  name          = var.content_library_ds
+  datacenter_id = data.vsphere_datacenter.dc.id
+}
+
 ## NSX Data Collection
 data "nsxt_policy_edge_cluster" "edge_cluster_01" {
   display_name        = var.edge_cluster
