@@ -13,17 +13,11 @@ nsx_provider_params = {
 
 ## vSphere Data Collection
 datacenter      = "vlab-dc"
-mgmt_cluster    = "tf-vlab-mgmt"
-comp_cluster    = "tf-vlab-tkg"
 vds             = "tf-mgmt"
 
 ## vSphere Resources
 content_library_ds = "vlab-nfs-ds-01"
-vm_folder          = "tf-tkg-vms"
-mgmt_rp            = "tf-tkg-mgmt"
-comp_rp            = "tf-tkg-workload"
-mgmt_net           = "tf-tkg-k8s-mgmt"
-mgmt_net_vlan      = "72"
+
 
 ## NSX Data Collection
 edge_cluster    = "tkg-edge-cluster-01"

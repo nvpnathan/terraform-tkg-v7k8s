@@ -57,11 +57,3 @@ resource "nsxt_policy_vlan_segment" "t0_uplink" {
       cidr  = var.uplink_segment
     }
 }
-
-## vSphere Resources
-resource "vsphere_distributed_port_group" "tkg_k8s_mgmt" {
-  name                            = var.mgmt_net
-  distributed_virtual_switch_uuid = data.vsphere_distributed_virtual_switch.vds.id
-
-  vlan_id = var.mgmt_net_vlan
-}

@@ -25,44 +25,9 @@ variable "content_library_ds" {
   description = "content library datastore"
 }
 
-variable "mgmt_cluster" {
-  type        = string
-  description = "cluster object in vcenter"
-}
-
-variable "comp_cluster" {
-  type        = string
-  description = "cluster object in vcenter"
-}
-
-variable "vm_folder" {
-  type        = string
-  description = "folder for tkg vms"
-}
-
-variable "mgmt_rp" {
-  type        = string
-  description = "vcenter resource pool for management"
-}
-
-variable "comp_rp" {
-  type        = string
-  description = "vcenter resource pool for compute workloads"
-}
-
 variable "vds" {
   type        = string
   description = "vsphere distributed switch"
-}
-
-variable "mgmt_net" {
-  type        = string
-  description = "distributed portgroup for mgmt"
-}
-
-variable "mgmt_net_vlan" {
-  type        = string
-  description = "vlan id for mgmt_net"
 }
 
 variable "edge_cluster" {
