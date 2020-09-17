@@ -12,15 +12,15 @@ nsx_provider_params = {
 }
 
 ## vSphere Data Collection
-datacenter      = "vlab-dc"
-vds             = "tf-mgmt"
+datacenter      = "pl-dc"
+vds             = "pl-tkg"
 
 ## vSphere Resources
-content_library_ds = "vlab-nfs-ds-01"
+content_library_ds = "nfs-01"
 
 
 ## NSX Data Collection
-edge_cluster    = "tkg-edge-cluster-01"
+edge_cluster    = "edge-cluster-1"
 vlan_tz         = "vlan-tz"
 overlay_tz      = "overlay-tz"
 
@@ -32,5 +32,6 @@ t0_uplink_ip_01     = "192.168.71.8/24"
 t0_uplink_02        = "tf-t0-uplink-02"
 t0_uplink_ip_02     = "192.168.71.9/24"
 t0_uplink_vlan      = "71"
+t0_ha_vip           = "192.168.71.10/24"
 default_route_ip    = "192.168.71.1"
 uplink_segment      = "192.168.71.1/24"

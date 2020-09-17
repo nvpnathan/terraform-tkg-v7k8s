@@ -80,6 +80,11 @@ variable "t0_uplink_vlan" {
   description = "t0 uplink vlan id"
 }
 
+variable "t0_ha_vip" {
+  type        = string
+  description = "t0 ha vip iip address"
+}
+
 variable "default_route_ip" {
   type        = string
   description = "t0 default route"

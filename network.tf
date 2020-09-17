@@ -26,7 +26,7 @@ resource "nsxt_policy_static_route" "default-route" {
 }
 
 # Create Tier-0 Gateway Uplink Interfaces
-resource "nsxt_policy_tier0_gateway_interface" "uplink1" {
+resource "nsxt_policy_tier0_gateway_interface" "if1" {
     display_name        = var.t0_uplink_01
     description         = "Terraform provisioned Segment"
     type                = "EXTERNAL"
@@ -37,7 +37,7 @@ resource "nsxt_policy_tier0_gateway_interface" "uplink1" {
     mtu                 = 1500
 }
  
-resource "nsxt_policy_tier0_gateway_interface" "uplink2" {
+resource "nsxt_policy_tier0_gateway_interface" "if2" {
     display_name        = var.t0_uplink_02
     description         = "Terraform provisioned Segment"
     type                = "EXTERNAL"
@@ -56,4 +56,12 @@ resource "nsxt_policy_vlan_segment" "t0_uplink" {
     subnet {
       cidr  = var.uplink_segment
     }
+}
+
+resource "nsxt_policy_tier0_gateway_ha_vip_config" "ha-vip" {
+  config {
+    enabled                  = true
+    external_interface_paths = [nsxt_policy_tier0_gateway_interface.if1.path, nsxt_policy_tier0_gateway_interface.if2.path]
+    vip_subnets              = [var.t0_ha_vip]
+  }
 }

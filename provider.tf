@@ -13,5 +13,5 @@ provider "nsxt" {
   username             = var.nsx_provider_params["nsx_usr"]
   password             = var.nsx_provider_params["nsx_pwd"]
   allow_unverified_ssl = true
-  version              = "2.0"
+  version              = "3.0.1"
 }

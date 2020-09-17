@@ -29,13 +29,8 @@ In vSphere 7 with Kubernetes, almost everything is automated for you. However, e
     * Tier0 Router
     * Uplink VLAN segment
     * Default Static Route
-    * VDS Portgroup for TKG (optional if only using vSphere 7 w/ K8s)
 
 **NOTE:** HA VIP configuration is not supported configuration in the NSX-T Provider. However, BGP IS supported in the NSX-T Provider. 
 
 [HA VIP Github Issue](https://github.com/terraform-providers/terraform-provider-nsxt/issues/289)
 
-### Compute Automation (**optional** if only using vSphere 7 w/ K8s)
-    * Management Resource Pool
-    * Compute Resource Pool
-    * VM folder
